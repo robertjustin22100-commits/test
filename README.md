@@ -1,16 +1,18 @@
-# Make It Shine
+# Make It Shine — terminal immersif
 
-Site vitrine responsive en français, en HTML, CSS et JavaScript, sans dépendance à installer.
+Site statique responsive sans dépendance à installer. Entrée par mot de passe, sons synthétisés avec Web Audio, accueil vocal via la synthèse vocale du navigateur et bureau interactif.
 
-## Lancer en local
+## Lancer
 
 ```sh
 cd /workspace/test
 python3 -m http.server 3000
 ```
 
-Ouvrir le port 3000 dans un navigateur. Le site peut aussi être déployé chez un hébergeur de fichiers statiques.
+## Accès et personnalisation
 
-## Personnaliser
+Le mot de passe est **SHINE** (insensible à la casse). Modifier `ACCESS_CODE` dans `script.js` pour le changer. Cet écran est une mise en scène : le code est visible dans les fichiers publics et ne protège pas des données confidentielles.
 
-Modifier `index.html` pour ajouter les véritables morceaux, dates et coordonnées du groupe. Le bouton de contact affiche actuellement un message d'attente : aucune adresse ni date fictive n'est publiée. Le visuel de scène est créé en CSS. Les polices Google Fonts ont des alternatives locales si le réseau est indisponible.
+Les sections musique, concerts et contact sont dans `screens` dans `script.js`. Ajouter les vrais contenus du groupe à cet endroit. Aucun titre, concert ou contact fictif n'est annoncé.
+
+Le son commence après une interaction. Le bouton SON permet de le couper. La voix dépend du support de la synthèse vocale et des voix installées dans le navigateur. La navigation fonctionne sans audio. Google Fonts est optionnel et possède des polices de repli locales.
